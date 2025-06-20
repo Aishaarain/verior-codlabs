@@ -1,0 +1,109 @@
+
+
+body{
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  width: 100%;
+  padding: 15px 30px;
+  background-color:#0e2844;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.navbar button {
+  background-color: #fff;
+  color: #0e2844;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 60px;
+}
+
+.container {
+  margin-top: 200px;
+  text-align: center;
+  padding: 30px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  color: #e2e6eb;
+  width: 400px;
+  height: 200px;
+   background: linear-gradient(135deg, #1d3851, #485666, #3380b3, #15273b);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+body.dark .navbar {
+  background-color: #fff;
+  color:#0e2844;;
+  
+}
+
+body.dark .navbar button {
+  background-color: #fff;
+  color: #0e2844;
+  border: 1px solid #0e2844;
+
+}
+
+* .dark{
+  background:  #0e2844;;
+ 
+}
+.navbar button,
+#darkModeToggle {
+  transition: transform 0.1s ease, background-color 0.3s;
+}
+.counter {
+  font-size: 30px;
+  color: white;
+}
+
+.counter button:active,
+#darkModeToggle:active {
+  transform: scale(0.95);
+}
+
+.counter button:hover,
+#darkModeToggle:hover {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  cursor: pointer;
+}
+.counter button{
+  width: 40px;
+  height: 40px;
+ font-size: 20px;
+}
+/* Animate button press (scale effect) */
+.counter button,
+#darkModeToggle {
+  transition: transform 0.1s ease, background-color 0.3s;
+}
+
+.counter button:active,
+#darkModeToggle:active {
+  transform: scale(0.95);
+}
+
+.counter button:hover,
+#darkModeToggle:hover {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
