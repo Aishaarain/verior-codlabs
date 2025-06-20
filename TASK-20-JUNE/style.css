@@ -49,8 +49,6 @@ body{
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-
-
 body.dark .navbar {
   background-color: #fff;
   color:#0e2844;;
@@ -61,7 +59,6 @@ body.dark .navbar button {
   background-color: #fff;
   color: #0e2844;
   border: 1px solid #0e2844;
-
 }
 
 * .dark{
@@ -77,11 +74,6 @@ body.dark .navbar button {
   color: white;
 }
 
-.counter button:active,
-#darkModeToggle:active {
-  transform: scale(0.95);
-}
-
 .counter button:hover,
 #darkModeToggle:hover {
   box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
@@ -92,18 +84,10 @@ body.dark .navbar button {
   height: 40px;
  font-size: 20px;
 }
-/* Animate button press (scale effect) */
-.counter button,
-#darkModeToggle {
-  transition: transform 0.1s ease, background-color 0.3s;
-}
 
 .counter button:active,
 #darkModeToggle:active {
   transform: scale(0.95);
 }
 
-.counter button:hover,
-#darkModeToggle:hover {
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-}
+
