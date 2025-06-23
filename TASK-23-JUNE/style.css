@@ -1,0 +1,137 @@
+:root{
+  --bg-color: rgb(63, 55, 33);
+  --text-color: beige;
+  --main-color: rgb(216, 195, 149);
+ 
+}
+*{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.logo{
+  font-weight: 1000;
+  font-size: 30px;
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+#navbar{
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.body{
+  background-image: url("/assets/back2\ \(2\).jpg");
+  color:var(--text-color);
+  background-repeat: no-repeat;
+  background-size: 100%;
+    overflow-x: hidden; 
+    height: 1000px;
+  
+} 
+.container{
+  margin: 50px 0px 20px;
+  text-align: center;
+  
+}
+.date-time{
+  margin-left: 30px;
+  font-size: 20px;
+  display: flex;
+}
+.temp-card{
+  margin-left: 250px;
+  min-height:  450px;
+  width: 350px;
+}
+.small-cards{
+  
+  display: flex;
+  flex-direction: column-reverse;
+  margin-left: 200px;
+}
+.small-cards .col{
+  width: 300px;
+  min-height: 100px;
+}
+span{
+  color: var(--main-color);
+  font-weight: 800;
+}
+
+.head{
+  color:var(--main-color) ;
+  font-style: italic;
+  font-weight: 800px;
+}
+#submit{
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+
+}
+#submit:hover{
+  background-color: var(--main-color);
+}
+.condition img{
+  min-width: 200px;
+  
+}
+li{
+  text-transform: capitalize;
+}
+#temp{
+  font-size: 25px;
+}
+.date-time .option{
+  margin-left: 750px;
+}
+.option .centigrade{
+  border: 4px solid var(--main-color);
+  border-radius: 20px;
+  background-color: var(--text-color);
+  padding: 5px 5px 5px 5px;
+  color: var(--main-color);
+  font-weight: 500;
+}
+.option .ferinheit{
+  border: 4px solid var(--main-color);
+  border-radius: 30px;
+  background-color: var(--text-color);
+  padding: 5px 5px 5px 5px;
+  color: var(--main-color);
+  font-weight: 500;
+}
+.centigrade:hover{
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+.ferinheit:hover{
+  
+    background-color: var(--main-color);
+    color: var(--text-color);
+  
+}
+
+    .user-card h2 {
+      text-align: center;
+      color: #1e3a8a;
+    }
+
+    .user-card {
+      background-color: #f9fafb;
+      border-left: 5px solid #0d2d60;
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-size: small;
+      height: 800px;
+      width: 600px;
+      margin-top: 60px;
+    }
+.user-card ul{
+  display: flex;
+  flex-direction: column;
+ justify-content: center;
+}
+    .user-card strong {
+      color: #111827;
+    }
