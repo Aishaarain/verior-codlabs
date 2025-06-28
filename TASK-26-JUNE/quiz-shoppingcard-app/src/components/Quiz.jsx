@@ -47,35 +47,58 @@ export default function App() {
   };
 
   return (<>
-    <h1>Shopping Cart App 🛒</h1>
-    <div>
-      <h2>Products</h2>
-      {products.map((product) => (
-        <div key={product.id} className="card">
-          <h3>{product.name}</h3>
-          <p>Price: ${product.price}</p>
-          <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
-        </div>
-      ))}
-    </div>
+   return (
+  <div className="container">
+    <h1>Quiz App</h1>
+
+    {showResult ? (
       <div>
-      <h2>Cart</h2>
-      {cart.length === 0 ? (
-        <p>Cart is empty</p>
-      ) : (
-        <>
-          {cart.map((item) => (
-            <div key={item.id} className="card">
-              <h3>{item.name}</h3>
-              <p>Price: ${item.price} × {item.qty}</p>
-              <button onClick={() => handleRemoveFromCart(item.id)}>Remove</button>
-            </div>
-             
-          ))}
-          <h3>Total: ${total}</h3>
-        </>
-      )}
-    </div>
+        <h2>Your Score: {score} / {quizData.length}</h2>
+        <button onClick={() => {
+          setCurrent(0);
+          setScore(0);
+          setSelected(null);
+          setShowResult(false);
+        }}>
+          Restart Quiz
+        </button>
+      </div>
+    ) : (
+      <div>
+        <h2>Q{current + 1}: {quizData[current].question}</h2>
+
+        {quizData[current].options.map((opt, index) => (
+          <div key={index} style={{ margin: '0.5rem 0' }}>
+            <input
+              type="radio"
+              id={`option-${index}`}
+              name="option"
+              value={opt}
+              checked={selected === opt}
+              onChange={() => handleAnswer(opt)}
+            />
+            <label htmlFor={`option-${index}`} style={{ marginLeft: '0.5rem' }}>
+              {opt}
+            </label>
+          </div>
+        ))}
+
+        <p style={{ marginTop: '1rem' }}>
+          Question {current + 1} of {quizData.length}
+        </p>
+
+        <button
+          onClick={handleNext}
+          disabled={selected === null}
+          style={{ marginTop: '1rem' }}
+        >
+          {current === quizData.length - 1 ? 'Finish' : 'Next'}
+        </button>
+      </div>
+    )}
+  </div>
+);
+
     
     </> 
   );
