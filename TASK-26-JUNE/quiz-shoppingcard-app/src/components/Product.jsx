@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import ProductList from "./ProductList";
-import Cart from "./Cart";
+
 
 const productsData = [
   { id: 1, name: "Laptop", price: 750 },
@@ -10,18 +9,41 @@ const productsData = [
 ];
 
 export default function App() {
+
+
   const [cart, setCart] = useState([]);
 
-  const addToCart = (product) => {
-    setCart((prevCart) => [...prevCart, product]);
-  };
+// Add to Cart
+const handleAddToCart = (product) => {
+  const exist = cart.find((item) => item.id === product.id);
+
+  if (exist) {
+
+    setCart(
+      cart.map((item) =>
+        item.id === product.id ? { ...item, qty: item.qty + 1 } : item
+      )
+    );
+  } else {
+  
+    setCart([...cart, { ...product, qty: 1 }]);
+  }
+};
+
+
+const handleRemoveFromCart = (productId) => {
+  setCart(cart.filter((item) => item.id !== productId));
+};
+
+  
+const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
 
   return (
     <div className="container">
       <h1>Shopping Cart App 🛒</h1>
     <div>
       <h2>Products</h2>
-      {products.map((product) => (
+      {productsData.map((product) => (
         <div key={product.id} className="card">
           <h3>{product.name}</h3>
           <p>Price: ${product.price}</p>
